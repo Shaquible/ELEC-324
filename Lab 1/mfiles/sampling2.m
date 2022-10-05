@@ -14,16 +14,16 @@ title('Continuous-time signal x_{a}(t)');
 
 % Second plot:
 subplot(2,2,2)
-wa = 0:10/511:10;
+wa = 0:10/511:20;
 ha = freqs(2,[1 2 1],wa);
 plot(wa/(2*pi),abs(ha));grid;
 xlabel('Frequency, Hz');ylabel('Magnitude');
 title('|X_{a}(j\Omega)|');
-axis([0 5/pi 0 2]);
+axis([0 pi/1.5 0 2]);
 
 % Third plot:
 subplot(2,2,3)
-T = 0.7;
+T = 0.1;
 n = 0:T:10;
 xs = 2*n.*exp(-n);
 k = 0:length(n)-1;

@@ -17,7 +17,7 @@ axis([0 1 -1.2 1.2])
 
 % Second plot
 subplot(4,1,2);
-T = 0.075;
+T = 0.005;
 n = 0:T:1;
 x_n = cos(2*pi*f*n);
 stem (n,x_n);
@@ -40,9 +40,11 @@ title ('Discrete-time signal x[n]');
 % Fourth plot
 subplot(4,1,4);
 y = zeros(1,length(t));
+
 for i = 1:length(n)
     y = y + x_n(i)*sinc(t/T - i + 1);
 end
+
 plot(t,y);
 grid;
 xlabel ('Time, sec');
