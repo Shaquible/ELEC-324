@@ -1,6 +1,6 @@
 % digital.m
 
-a = 100;
+a = 5;
 x = 0:2*pi/1000:2*pi;
 y = a*sin(x);
 y_int = int8(y);
